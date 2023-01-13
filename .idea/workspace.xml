@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d2c12cb-0bd6-4ced-95d4-12822db68dfc" name="Changes" comment="Reform JDBConnect with application.yml&#10;Reduce class Settings.java&#10;Reform UserInterface with Spring shell">
-      <change afterPath="$PROJECT_DIR$/src/main/java/university/app/config/ShellConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/university/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/university/app/Services/JDBConnect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/Services/JDBConnect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/university/app/Services/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/Services/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/university/app/config/Settings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/university/app/repositoty/artistRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/university/app/repositoty/artistRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,12 +63,14 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/rakmo/Documents/MuseumDatabaseApp_with_Spring_Boot/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -171,7 +166,7 @@
       <workItem from="1673441840313" duration="2285000" />
       <workItem from="1673563498023" duration="2641000" />
       <workItem from="1673566229863" duration="1555000" />
-      <workItem from="1673567865818" duration="1488000" />
+      <workItem from="1673567865818" duration="2024000" />
     </task>
     <task id="LOCAL-00001" summary="First lab-work with new gradle dependencies">
       <created>1672448720357</created>
@@ -180,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672448720357</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Reform JDBConnect with application.yml&#10;Reduce class Settings.java&#10;Reform UserInterface with Spring shell">
+      <created>1673569431411</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673569431411</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
