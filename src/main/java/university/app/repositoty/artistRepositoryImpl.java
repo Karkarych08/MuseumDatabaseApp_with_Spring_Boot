@@ -1,6 +1,7 @@
 package university.app.repositoty;
 
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import university.app.Interfaces.artistRepository;
 import university.app.Services.JDBConnect;
@@ -13,34 +14,37 @@ import java.util.Collection;
 
 
 @Repository
+@RequiredArgsConstructor
 public class artistRepositoryImpl implements artistRepository {
 
-    JDBConnect jdbConnect = new JDBConnect();
 
-    Connection connection = jdbConnect.getConnection();
+    private final JDBConnect jdbConnect;
 
-    public artistRepositoryImpl() throws SQLException {
-    }
 
     @Override
     public Collection<artistDAO> findOlderThenDate(Calendar date) throws SQLException {
-        PreparedStatement prepareStatement = connection.prepareStatement("SELECT * FROM artist where dateofbirth>?");
-        prepareStatement.setDate(1, new Date(date.getTime().getTime()));
-        ResultSet resultSet =  prepareStatement.executeQuery();
+        ResultSet resultSet;
+        try (PreparedStatement prepareStatement = jdbConnect.getConnection().prepareStatement("SELECT * FROM artist where dateofbirth>?")) {
+            prepareStatement.setDate(1, new Date(date.getTime().getTime()));
+            resultSet = prepareStatement.executeQuery();
+        }
         return getArtistDAOS(resultSet);
     }
 
     @Override
     public Collection<artistDAO> findAll() throws SQLException {
-        ResultSet resultSet = connection.createStatement().executeQuery("SELECT * FROM artist");
-        return getArtistDAOS(resultSet);
+        try (ResultSet resultSet = jdbConnect.getConnection().createStatement().executeQuery("SELECT * FROM artist")) {
+            return getArtistDAOS(resultSet);
+        }
     }
 
     @Override
     public Collection<artistDAO> findAllByCountry(String country) throws SQLException {
-        PreparedStatement prepareStatement = connection.prepareStatement("SELECT * FROM artist where country=?");
-        prepareStatement.setString(1,country);
-        ResultSet resultSet =  prepareStatement.executeQuery();
+        ResultSet resultSet;
+        try (PreparedStatement prepareStatement = jdbConnect.getConnection().prepareStatement("SELECT * FROM artist where country=?")) {
+            prepareStatement.setString(1, country);
+            resultSet = prepareStatement.executeQuery();
+        }
         return getArtistDAOS(resultSet);
     }
 
@@ -62,9 +66,11 @@ public class artistRepositoryImpl implements artistRepository {
 
     @Override
     public Collection<artistDAO> findById(long id) throws SQLException {
-        PreparedStatement prepareStatement = connection.prepareStatement("SELECT * FROM artist where id=?");
-        prepareStatement.setLong(1,id);
-        ResultSet resultSet =  prepareStatement.executeQuery();
+        ResultSet resultSet;
+        try (PreparedStatement prepareStatement = jdbConnect.getConnection().prepareStatement("SELECT * FROM artist where id=?")) {
+            prepareStatement.setLong(1, id);
+            resultSet = prepareStatement.executeQuery();
+        }
         return getArtistDAOS(resultSet);
     }
 }
